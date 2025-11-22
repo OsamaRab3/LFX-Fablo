@@ -181,18 +181,43 @@ I fixed the connection profile generator to:
 
 ---
 
-
 ### 4. Testing Improvements
 
 #### End-to-End Bash Tests
+##### 
 
 #### Jest Tests
 
+
 ### 5. Bug Fixes
 
-### 6. Documentation Enhancements
+### Documentation: Coverage Tracker
+A key part of my mentorship was creating and maintaining a comprehensive coverage tracker for Fablo. This document tracks all features, their test coverage, and documentation status across Fabric v2 and v3.
+#### Purpose of the Coverage Tracker:
+- Track mentorship progress: Monitor which features have been tested and documented
+- Ensure feature parity: Verify that all Fabric v2 features work correctly with Fabric v3
+- Identify gaps: Easily spot missing tests or documentation
+
+#### My Documentation PRs:
 
 
+> [docs: Update coverage tracker - Fablo Commands section #563](https://github.com/hyperledger-labs/fablo/pull/563)
+
+Documented the test and documentation coverage for all Fablo commands.
+
+> [docs: Update coverage tracker - Snapshot #564](https://github.com/hyperledger-labs/fablo/pull/564)
+
+Added coverage tracking for the network snapshot
+
+> [docs: Update coverage for 'Other Features' #566](https://github.com/hyperledger-labs/fablo/pull/566)
+
+Completed coverage tracking for additional Fablo features including hooks, Peer dev mode,  Connection profiles and Gateway client.
+
+> [docs: Update coverage tracker with CI test links for various features #586](https://github.com/hyperledger-labs/fablo/pull/586)
+
+Enhanced the coverage tracker by adding direct links to CI test runs, making it easier to verify test status and trace test execution for each feature.
+
+This tracker serves as a living document that helps the Fablo team maintain quality and completeness across all supported Fabric versions.
 
 ---
 
