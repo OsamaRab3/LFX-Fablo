@@ -156,6 +156,30 @@ The `fablo init` generator relied on an external JSON config file (__fablo-confi
 I simplified the init generator in `src/init/index.ts` by hardcoding the default configuration directly into the source code. This eliminated the need to copy external config files in the Dockerfile, resulting in a cleaner build process and more maintainable codebase.
 
 ---
+### 4. Feature: Enhanced Connection Profile with Orderers and Channels
+
+> [feat: Add orderers and channels in connection profile #595](https://github.com/hyperledger-labs/fablo/pull/595)
+
+**The Problem:**
+
+The generated connection profile had several issues that prevented Node.js clients from working correctly when service discovery was disabled (e.g., in dev mode):
+
+1. CA URL incorrectly used http:// even when TLS was enabled (should be https://)
+2. Missing orderers section: required when service discovery is disabled
+3. Missing channels section: also required when service discovery is disabled
+
+These issues made it impossible for client applications to connect properly without service discovery.
+**The Solution:**
+
+I fixed the connection profile generator to:
+
+- Correctly handle TLS: CA URLs now use https:// when TLS is enabled
+- Include orderers section: Added the required orderer information for non-service-discovery scenarios
+- Include channels section: Added channel configuration needed for proper client connectivity
+---
+### 5. 
+
+---
 
 
 ### 4. Testing Improvements
