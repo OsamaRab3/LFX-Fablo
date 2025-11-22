@@ -9,9 +9,9 @@
 
 Fablo is a developer-friendly tool for quickly spinning up Hyperledger Fabric networks using Docker. It simplifies network configuration through a single declarative file, making it ideal for:
 
-- **Local development** – Quickly test chaincode and network configurations
-- **CI/CD pipelines** – Automate Fabric network deployment in testing environments
-- **Experimentation** – Try different network topologies without complex manual setup
+- **Local development**: Quickly test chaincode and network configurations
+- **CI/CD pipelines**: Automate Fabric network deployment in testing environments
+- **Experimentation**: Try different network topologies without complex manual setup
 
 ### Key Features of Fablo
 
@@ -28,13 +28,13 @@ Fablo is a developer-friendly tool for quickly spinning up Hyperledger Fabric ne
 
 The primary objectives of my mentorship were:
 
-1. **Ensure feature parity between Fabric v2 and v3** – Verify that all features supported in Fabric v2 work correctly with Fabric v3, especially peer dev mode, network snapshots, and channel query scripts
+1. **Ensure feature parity between Fabric v2 and v3**: Verify that all features supported in Fabric v2 work correctly with Fabric v3, especially peer dev mode, network snapshots, and channel query scripts
 
-2. **Improve test coverage** – Write and enhance end-to-end Bash tests and Jest tests for various network configurations
+2. **Improve test coverage**: Write and enhance end-to-end Bash tests and Jest tests for various network configurations
 
-3. **Enhance documentation** – Identify and fill gaps in the existing documentation
+3. **Enhance documentation**: Identify and fill gaps in the existing documentation
 
-4. **Fix issues** – Resolve minor bugs and issues discovered during testing
+4. **Fix issues**: Resolve minor bugs and issues discovered during testing
 
 ---
 ## My Journey
@@ -116,9 +116,11 @@ This significantly improves the developer experience for teams building Java-bas
 > [feat: Hardcode fablo config inside init generator #530](https://github.com/hyperledger-labs/fablo/pull/554)
 
 **The Problem:**
+
 The `fablo init` generator relied on an external JSON config file (__fablo-config-hlf2-1org-1chaincode.json__) that needed to be copied into the Docker image during the build process. This added unnecessary complexity to the Dockerfile and the initialization flow.
 
 **The Solution:**
+
 I simplified the init generator in `src/init/index.ts` by hardcoding the default configuration directly into the source code. This eliminated the need to copy external config files in the Dockerfile, resulting in a cleaner build process and more maintainable codebase.
 
 ---
