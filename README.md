@@ -1,11 +1,19 @@
 # LFX Fablo
-## My LFX Mentorship Journey: Testing, Documentation, and Feature Parity for Fablo (Hyperledger Fabric v2/v3)
-**LF Decentralized Trust | 2025 June–November (Part-Time)**
 ![fablo logo](./images/logo.svg)
 
+**LF Decentralized Trust | 2025 June–November (Part-Time)**
+
+## Table of Contents
+- [About Fablo](#about-fablo)
+- [Mentorship Overview](#mentorship-overview)
+- [My Learning Journey](#my-learning-journey)
+- [Key Contributions](#key-contributions)
+- [Outcomes and Deliverables](#outcomes-and-deliverables)
+- [What I Learned](#what-i-learned)
+- [Acknowledgments](#acknowledgments)
+- [Links and Resources](#links-and-resources)
 
 ## About Fablo
-### What is Fablo?
 
 Fablo is a developer-friendly tool for quickly spinning up Hyperledger Fabric networks using Docker. It simplifies network configuration through a single declarative file, making it ideal for:
 
@@ -13,45 +21,69 @@ Fablo is a developer-friendly tool for quickly spinning up Hyperledger Fabric ne
 - **CI/CD pipelines**: Automate Fabric network deployment in testing environments
 - **Experimentation**: Try different network topologies without complex manual setup
 
-### Key Features of Fablo
+### Key Features
 
-- Supports **Hyperledger Fabric v2.x and v3.x**
-- Multiple consensus protocols: **BFT, RAFT, and Solo**
-- **Network snapshots** for saving and restoring network states
-- **Chaincode-as-a-Service (CCaaS)** support
-- **Java chaincode hot reload** (dev mode)
-- **Mermaid-based network topology visualization**
-- REST API integration and advanced topology configuration
+- **Multi-Version Support**: Hyperledger Fabric v2.x and v3.x
+- **Consensus Protocols**: BFT, RAFT, and Solo
+- **Developer Experience**:
+  - Java chaincode hot reload (dev mode)
+  - Mermaid-based network topology visualization
+  - Chaincode-as-a-Service (CCaaS) support
+  - Network snapshots for saving/restoring states
+- **Advanced Features**:
+  - REST API integration
+  - Advanced topology configuration
 
----
-## Mentorship Goals
+## Mentorship Overview
 
-The primary objectives of my mentorship were:
+### Goals
 
-1. **Ensure feature parity between Fabric v2 and v3**: Verify that all features supported in Fabric v2 work correctly with Fabric v3, especially peer dev mode, network snapshots, and channel query scripts
+1. **Feature Parity**: Ensure compatibility between Fabric v2 and v3
+   - Peer dev mode
+   - Network snapshots
+   - Channel query scripts
 
-2. **Improve test coverage**: Write and enhance end-to-end Bash tests and Jest tests for various network configurations
+2. **Testing Improvements**:
+   - Enhance end-to-end Bash tests
+   - Expand Jest test coverage
+   - Test various network configurations
 
-3. **Enhance documentation**: Identify and fill gaps in the existing documentation
+3. **Documentation**:
+   - Identify documentation gaps
+   - Improve existing documentation
+   - Add usage examples
 
-4. **Fix issues**: Resolve minor bugs and issues discovered during testing
+4. **Bug Fixes**:
+   - Resolve reported issues
+   - Improve error handling
+   - Enhance stability
 
----
-## My Journey
-
-### Understanding Fablo
+## My Learning Journey
 
 When I started this mentorship, I had no prior experience with Hyperledger Fabric or Fablo. I didn't know what Fablo was or what it did.
 
 This mentorship was my first real introduction to blockchain network tooling and Hyperledger Fabric concepts.
 
-#### My Learning Journey:
-- Understanding Hyperledger Fabric from scratch: I spent time learning the fundamentals of Hyperledger Fabric: peers, orderers, channels, chaincode, and how enterprise blockchain networks operate
-- Exploring Fablo's purpose: I discovered that Fablo simplifies the complex process of spinning up Fabric networks by using a single configuration file, which was eye-opening for understanding developer experience in blockchain
-- Setting up the local development environment: Configured Docker, cloned the repository, and got Fablo running locally
-- Studying Fablo's architecture: Explored how Fablo generates network configurations, manages Docker containers
-- Running existing test suites: Executed Bash and Jest tests to understand the testing framework and current coverage
-#### My First Contribution:
+### Understanding the Technology Stack
+
+- **Hyperledger Fabric Fundamentals**:
+  - Peers, orderers, and channels architecture
+  - Chaincode development and deployment
+  - Enterprise blockchain network operations
+
+- **Fablo's Core Concepts**:
+  - Single configuration file approach
+  - Docker container management
+  - Network generation process
+
+### Development Environment Setup
+
+- Configured Docker environment
+- Set up local development workspace
+- Explored existing codebase structure
+- Executed test suites to understand coverage
+
+### First Milestone
 Early in my journey, I tackled an important issue that had been open: enabling cross-platform testing on macOS (Issue #217). This resulted in my first pull request:
 
 > [feat: Add cross-platform testing on macOS #546](https://github.com/hyperledger-labs/fablo/pull/546)
@@ -61,9 +93,9 @@ This contribution allowed Fablo's test suite to run on different operating syste
 
 ---
 
-## Contributions
-### Features 
-#### Network Topology Visualization with Mermaid
+## Key Contributions
+
+### 1. Network Topology Visualization with Mermaid
 
 > [feat: Export network topology with Mermaid #565](https://github.com/hyperledger-labs/fablo/pull/565)
 
@@ -91,7 +123,7 @@ Additionally, I enhanced this feature so that diagrams are generated by default 
 This feature transforms how teams understand, document, and communicate their Hyperledger Fabric network topologies.
 
 ---
-#### Feature: Java Chaincode Development Mode Support
+### 2. Java Chaincode Development Mode Support
 
 > [feat: Add Java chaincode development mode support #553](https://github.com/hyperledger-labs/fablo/pull/553)
 
@@ -111,7 +143,7 @@ I implemented Java chaincode development mode (hot reload) support in Fablo. Thi
 This significantly improves the developer experience for teams building Java-based smart contracts on Hyperledger Fabric
 
 ---
-#### Simplified Init Generator
+### 3. Simplified Init Generator
 
 > [feat: Hardcode fablo config inside init generator #530](https://github.com/hyperledger-labs/fablo/pull/554)
 
@@ -126,16 +158,15 @@ I simplified the init generator in `src/init/index.ts` by hardcoding the default
 ---
 
 
----
-### End-to-End Bash Tests
+### 4. Testing Improvements
 
+#### End-to-End Bash Tests
 
-### Jest Tests
+#### Jest Tests
 
-### Bug Fixes 
+### 5. Bug Fixes
 
-
-### Documentation Improvements
+### 6. Documentation Enhancements
 
 
 
@@ -143,44 +174,31 @@ I simplified the init generator in `src/init/index.ts` by hardcoding the default
 
 ## Outcomes and Deliverables
 
-**E2E Bash tests** verifying Fabric v3 features (peer dev mode, snapshots, channel query scripts)
+### Testing Framework
 
-- **Revisited and improved existing tests**
-- **Test summaries** documenting objectives, scope, and expected outcomes
-- **Enhanced Jest tests** for various network configurations
-- **Improved documentation**
-- **Bug fixes**
 
----
+### Code Improvements
+
+
+### Documentation
+
 
 ## What I Learned
 
 ### Technical Skills
 
 
-
 ### Soft Skills
-
-
-
----
 
 
 ## Acknowledgments
 
 
----
 
 ## Links and Resources
 
 - **Fablo GitHub Repository:** [https://github.com/hyperledger-labs/fablo](https://github.com/hyperledger-labs/fablo)
 
-
----
-
 ## Final Thoughts
-
-
----
 
 *If you're interested in contributing to Fablo or have questions about my experience, feel free to reach out!*
